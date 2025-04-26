@@ -295,7 +295,7 @@ function openVideoModal(element) {
     
     // Aqui você pode definir a URL do vídeo baseado no jogo
     // Exemplo: você pode adicionar um atributo data-video-url no card do jogo
-    const videoUrl = gameCard.dataset.videoUrl || 'https://www.youtube.com/embed/dQw4w9WgXcQ'; // URL padrão
+    const videoUrl = gameCard.dataset.videoUrl || 'https://www.youtube.com/watch?v=kJTwOfl0RmA'; // URL padrão
     
     document.getElementById('videoTitle').textContent = `Vídeo: ${gameTitle}`;
     document.getElementById('videoFrame').src = videoUrl;
