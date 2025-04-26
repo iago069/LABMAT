@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LABMAT | Sobre Nós</title>
+    <!-- Usar caminho relativo para CSS -->
+    <link rel="stylesheet" href="./index.css">
+    <!-- Incluir Font Awesome via CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Incluir Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
@@ -16,33 +19,47 @@
     
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo"><i class="fas fa-flask"></i> LABMAT</a>
+            <!-- Usar caminho relativo para a home -->
+            <a href="./index.html" class="logo"><i class="fas fa-flask"></i> LABMAT</a>
             <div class="nav-links">
-                <a href="index.html"><i class="fas fa-home"></i> Início</a>
-                <a href="jogos.html"><i class="fas fa-gamepad"></i> Jogos</a>
-                <a href="sobre.html" class="active"><i class="fas fa-info-circle"></i> Sobre</a>
-                <a href="contato.html"><i class="fas fa-envelope"></i> Contato</a>
+                <a href="./index.html"><i class="fas fa-home"></i> Início</a>
+                <a href="./jogos.html"><i class="fas fa-gamepad"></i> Jogos</a>
+                <a href="./sobre.html" class="active"><i class="fas fa-info-circle"></i> Sobre</a>
+                <a href="./contato.html"><i class="fas fa-envelope"></i> Contato</a>
             </div>
         </div>
     </nav>
 
     <div class="container">
         <section class="about-section">
-            <h2 class="section-title">Nossa História</h2>
+            <h2 class="section-title">Nossa <span class="highlight">História</span></h2>
             <div class="about-content">
-                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Laboratório LABMAT" class="about-img">
+                <div class="about-img-container">
+                    <img src="images/LABMAT.png" alt="Laboratório LABMAT" class="about-img">
+                    <div class="img-decoration"></div>
+                </div>
                 <div class="about-text">
-                    <p>O LABMAT foi fundado em 2010 com o objetivo de revolucionar o ensino de matemática através da interatividade e tecnologia.</p>
-                    <p>Nossa missão é transformar a maneira como estudantes aprendem matemática, tornando o aprendizado acessível e divertido.</p>
+                    <div class="mission-statement">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>O Laboratório de Matemática surge como uma resposta às dificuldades encontradas por estudantes do Ensino Médio Integrado do Campus Rio Grande nas disciplinas de Matemática, principalmente Matemática I.</p>
+                    </div>
+                    
+                    <p class="featured-text">Por meio de projetos que envolvem oficinas e monitorias, ao longo do ano letivo buscamos auxiliar os alunos em seus processos de aprendizagem. Além disso, apresentamos estratégias, ambientes virtuais e físicos, materiais digitais e concretos, a fim de possibilitar aos estudantes encontrar formas mais adequadas de se aproximarem da Matemática.</p>
+                    
+                    <div class="mission-box">
+                        <h3>Nossa Missão</h3>
+                        <p>Transformar a maneira como estudantes aprendem matemática, tornando o aprendizado acessível e divertido.</p>
+                        <i class="fas fa-rocket mission-icon"></i>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
-
     <footer>
-        <p>&copy; 2023 LABMAT - Todos os direitos reservados</p>
+        <p>&copy; 2025 IFRS - Todos os direitos reservados</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Usar caminho relativo para JS -->
+    <script src="index.js"></script>
 </body>
 </html>
