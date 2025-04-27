@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LABMAT | Jogos Matemáticos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 
@@ -23,6 +22,7 @@
             <div class="nav-links">
                 <a href="index.html"><i class="fas fa-home"></i> Início</a>
                 <a href="jogos.html" class="active"><i class="fas fa-gamepad"></i> Jogos</a>
+                <a href="tutoriais.html"><i class="fas fa-graduation-cap"></i> Tutoriais</a>
                 <a href="Sobre.html"><i class="fas fa-info-circle"></i> Sobre</a>
                 <a href="Contato.html"><i class="fas fa-envelope"></i> Contato</a>
             </div>
@@ -32,13 +32,11 @@
     <div class="container">
         <h2 class="section-title">Nossos Jogos Matemáticos</h2>
         <div class="search-filter-container">
-            <!-- Barra de Pesquisa -->
             <div class="search-bar">
                 <input type="text" id="searchInput" placeholder="Pesquisar jogos...">
                 <button id="searchButton"><i class="fas fa-search"></i></button>
             </div>
 
-            <!-- Filtros por Categoria -->
             <div class="category-filters">
                 <button class="filter-btn active" data-category="all">Todos</button>
                 <button class="filter-btn" data-category="trigonometria">Trigonometria</button>
@@ -51,18 +49,13 @@
 
         <div class="games-grid">
             <!-- Jogo 1 -->
-            <div class="game-card" data-category="trigonometria" data-name="trigonometria master">
+            <div class="game-card" data-category="trigonometria" data-name="matix">
                 <div class="game-img-container">
-                    <img src="images/Fotos jogos/MATIX.jpg" alt="Trigonometria Master">
-                    <!-- Ícone de Tutorial Flutuante -->
-                    <div class="video-icon" onclick="openVideoModal(this)">
-                        <i class="fas fa-video"></i>
-                        <span class="tooltip">Ver Vídeo</span>
-                    </div>
+                    <img src="images/Fotos jogos/MATIX.jpg" alt="MATIX">
                 </div>
                 <div class="game-info">
                     <h3>MATIX</h3>
-                    <p>Aprenda seno, cosseno e tangente</p>
+                    <p>Desafios de matrizes e álgebra linear</p>
                     <div class="game-details">
                         <span class="status available">Disponível</span>
                         <div class="game-actions">
@@ -75,49 +68,29 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Conteúdo "Sobre o Jogo" (hidden) -->
                 <div class="about-content" style="display:none">
                     <h4>Como Jogar:</h4>
-                    <p>Domine os conceitos de trigonometria resolvendo desafios progressivos:</p>
+                    <p>Resolva problemas com matrizes e operações lineares:</p>
                     <ol>
-                        <li>Selecione o tipo de problema</li>
-                        <li>Use as ferramentas de medição</li>
-                        <li>Aplique as fórmulas corretas</li>
-                        <li>Avance para níveis mais complexos</li>
+                        <li>Escolha o nível de dificuldade</li>
+                        <li>Resolva as operações matriciais</li>
+                        <li>Avance para desafios mais complexos</li>
                     </ol>
-
-                    <h4>Conceitos Ensinados:</h4>
-                    <ul>
-                        <li>Razões trigonométricas</li>
-                        <li>Teorema de Pitágoras</li>
-                        <li>Relações no círculo unitário</li>
-                    </ul>
-
                     <div class="about-footer">
-                        <span class="difficulty">
-                            <i class="fas fa-bolt"></i> Dificuldade: Intermediária
-                        </span>
-                        <span class="duration">
-                            <i class="fas fa-clock"></i> Duração: 15-30 min
-                        </span>
+                        <span class="difficulty"><i class="fas fa-bolt"></i> Dificuldade: Intermediária</span>
+                        <span class="duration"><i class="fas fa-clock"></i> Duração: 20-40 min</span>
                     </div>
                 </div>
             </div>
 
             <!-- Jogo 2 -->
-            <div class="game-card" data-category="trigonometria" data-name="trigonometria master">
+            <div class="game-card" data-category="algebra" data-name="algeplan">
                 <div class="game-img-container">
-                    <img src="images/Fotos jogos/ALGEPLAN.jpg" alt="Trigonometria Master">
-                    <!-- Ícone de Tutorial Flutuante -->
-                    <div class="video-icon" onclick="openVideoModal(this)">
-                        <i class="fas fa-video"></i>
-                        <span class="tooltip">Tutorial</span>
-                    </div>
+                    <img src="images/Fotos jogos/ALGEPLAN.jpg" alt="ALGEPLAN">
                 </div>
                 <div class="game-info">
                     <h3>ALGEPLAN</h3>
-                    <p>Aprenda seno, cosseno e tangente</p>
+                    <p>Álgebra com peças manipuláveis</p>
                     <div class="game-details">
                         <span class="status available">Disponível</span>
                         <div class="game-actions">
@@ -130,48 +103,29 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Conteúdo "Sobre o Jogo" (hidden) -->
                 <div class="about-content" style="display:none">
                     <h4>Como Jogar:</h4>
-                    <p>Domine os conceitos de trigonometria resolvendo desafios progressivos:</p>
+                    <p>Represente expressões algébricas com peças físicas:</p>
                     <ol>
-                        <li>Selecione o tipo de problema</li>
-                        <li>Use as ferramentas de medição</li>
-                        <li>Aplique as fórmulas corretas</li>
-                        <li>Avance para níveis mais complexos</li>
+                        <li>Monte a equação com as peças</li>
+                        <li>Resolva passo a passo</li>
+                        <li>Verifique sua solução</li>
                     </ol>
-
-                    <h4>Conceitos Ensinados:</h4>
-                    <ul>
-                        <li>Razões trigonométricas</li>
-                        <li>Teorema de Pitágoras</li>
-                        <li>Relações no círculo unitário</li>
-                    </ul>
-
                     <div class="about-footer">
-                        <span class="difficulty">
-                            <i class="fas fa-bolt"></i> Dificuldade: Intermediária
-                        </span>
-                        <span class="duration">
-                            <i class="fas fa-clock"></i> Duração: 15-30 min
-                        </span>
+                        <span class="difficulty"><i class="fas fa-bolt"></i> Dificuldade: Básica</span>
+                        <span class="duration"><i class="fas fa-clock"></i> Duração: 15-30 min</span>
                     </div>
                 </div>
             </div>
-            <!--jogo 3-->
-            <div class="game-card" data-category="trigonometria" data-name="trigonometria master">
+
+            <!-- Jogo 3 -->
+            <div class="game-card" data-category="geometria" data-name="damas">
                 <div class="game-img-container">
-                    <img src="images/Fotos jogos/Damas.jpg" alt="Trigonometria Master">
-                    <!-- Ícone de Tutorial Flutuante -->
-                    <div class="video-icon" onclick="openVideoModal(this)">
-                        <i class="fas fa-video"></i>
-                        <span class="tooltip">Tutorial</span>
-                    </div>
+                    <img src="images/Fotos jogos/Damas.jpg" alt="Damas Matemáticas">
                 </div>
                 <div class="game-info">
                     <h3>DAMAS</h3>
-                    <p>Aprenda seno, cosseno e tangente</p>
+                    <p>Damas com desafios matemáticos</p>
                     <div class="game-details">
                         <span class="status available">Disponível</span>
                         <div class="game-actions">
@@ -184,48 +138,29 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Conteúdo "Sobre o Jogo" (hidden) -->
                 <div class="about-content" style="display:none">
                     <h4>Como Jogar:</h4>
-                    <p>Domine os conceitos de trigonometria resolvendo desafios progressivos:</p>
+                    <p>Jogue damas resolvendo problemas matemáticos:</p>
                     <ol>
-                        <li>Selecione o tipo de problema</li>
-                        <li>Use as ferramentas de medição</li>
-                        <li>Aplique as fórmulas corretas</li>
-                        <li>Avance para níveis mais complexos</li>
+                        <li>Resolva o problema para fazer seu movimento</li>
+                        <li>Capture peças respondendo corretamente</li>
+                        <li>Vença o jogo tradicional</li>
                     </ol>
-
-                    <h4>Conceitos Ensinados:</h4>
-                    <ul>
-                        <li>Razões trigonométricas</li>
-                        <li>Teorema de Pitágoras</li>
-                        <li>Relações no círculo unitário</li>
-                    </ul>
-
                     <div class="about-footer">
-                        <span class="difficulty">
-                            <i class="fas fa-bolt"></i> Dificuldade: Intermediária
-                        </span>
-                        <span class="duration">
-                            <i class="fas fa-clock"></i> Duração: 15-30 min
-                        </span>
+                        <span class="difficulty"><i class="fas fa-bolt"></i> Dificuldade: Variável</span>
+                        <span class="duration"><i class="fas fa-clock"></i> Duração: 15-45 min</span>
                     </div>
                 </div>
             </div>
-            <!--jogo 4-->
-            <div class="game-card" data-category="trigonometria" data-name="trigonometria master">
+
+            <!-- Jogo 4 -->
+            <div class="game-card" data-category="calculos" data-name="discos de fracoes">
                 <div class="game-img-container">
-                    <img src="images/Fotos jogos/Discos de Fraçoes.jpg" alt="Trigonometria Master">
-                    <!-- Ícone de Tutorial Flutuante -->
-                    <div class="video-icon" onclick="openVideoModal(this)">
-                        <i class="fas fa-video"></i>
-                        <span class="tooltip">Tutorial</span>
-                    </div>
+                    <img src="images/Fotos jogos/Discos de Fraçoes.jpg" alt="Discos de Frações">
                 </div>
                 <div class="game-info">
                     <h3>DISCOS DE FRAÇÕES</h3>
-                    <p>Aprenda seno, cosseno e tangente</p>
+                    <p>Aprenda frações de forma visual</p>
                     <div class="game-details">
                         <span class="status available">Disponível</span>
                         <div class="game-actions">
@@ -238,48 +173,29 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Conteúdo "Sobre o Jogo" (hidden) -->
                 <div class="about-content" style="display:none">
                     <h4>Como Jogar:</h4>
-                    <p>Domine os conceitos de trigonometria resolvendo desafios progressivos:</p>
+                    <p>Manipule discos para entender frações:</p>
                     <ol>
-                        <li>Selecione o tipo de problema</li>
-                        <li>Use as ferramentas de medição</li>
-                        <li>Aplique as fórmulas corretas</li>
-                        <li>Avance para níveis mais complexos</li>
+                        <li>Combine discos para formar inteiros</li>
+                        <li>Compare frações equivalentes</li>
+                        <li>Realize operações com frações</li>
                     </ol>
-
-                    <h4>Conceitos Ensinados:</h4>
-                    <ul>
-                        <li>Razões trigonométricas</li>
-                        <li>Teorema de Pitágoras</li>
-                        <li>Relações no círculo unitário</li>
-                    </ul>
-
                     <div class="about-footer">
-                        <span class="difficulty">
-                            <i class="fas fa-bolt"></i> Dificuldade: Intermediária
-                        </span>
-                        <span class="duration">
-                            <i class="fas fa-clock"></i> Duração: 15-30 min
-                        </span>
+                        <span class="difficulty"><i class="fas fa-bolt"></i> Dificuldade: Básica</span>
+                        <span class="duration"><i class="fas fa-clock"></i> Duração: 15-30 min</span>
                     </div>
                 </div>
             </div>
-            <!--jogo 5-->
-            <div class="game-card" data-category="trigonometria" data-name="trigonometria master">
+
+            <!-- Jogo 5 -->
+            <div class="game-card" data-category="tabuada" data-name="dominó">
                 <div class="game-img-container">
-                    <img src="images/Fotos jogos/Dominó.jpg" alt="Trigonometria Master">
-                    <!-- Ícone de Tutorial Flutuante -->
-                    <div class="video-icon" onclick="openVideoModal(this)">
-                        <i class="fas fa-video"></i>
-                        <span class="tooltip">Tutorial</span>
-                    </div>
+                    <img src="images/Fotos jogos/Dominó.jpg" alt="Dominó Matemático">
                 </div>
                 <div class="game-info">
                     <h3>DOMINÓ</h3>
-                    <p>Aprenda seno, cosseno e tangente</p>
+                    <p>Dominó com operações matemáticas</p>
                     <div class="game-details">
                         <span class="status available">Disponível</span>
                         <div class="game-actions">
@@ -292,48 +208,29 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Conteúdo "Sobre o Jogo" (hidden) -->
                 <div class="about-content" style="display:none">
                     <h4>Como Jogar:</h4>
-                    <p>Domine os conceitos de trigonometria resolvendo desafios progressivos:</p>
+                    <p>Jogue dominó conectando operações e resultados:</p>
                     <ol>
-                        <li>Selecione o tipo de problema</li>
-                        <li>Use as ferramentas de medição</li>
-                        <li>Aplique as fórmulas corretas</li>
-                        <li>Avance para níveis mais complexos</li>
+                        <li>Combine peças com operações equivalentes</li>
+                        <li>Resolva as operações para continuar</li>
+                        <li>Vença esgotando suas peças</li>
                     </ol>
-
-                    <h4>Conceitos Ensinados:</h4>
-                    <ul>
-                        <li>Razões trigonométricas</li>
-                        <li>Teorema de Pitágoras</li>
-                        <li>Relações no círculo unitário</li>
-                    </ul>
-
                     <div class="about-footer">
-                        <span class="difficulty">
-                            <i class="fas fa-bolt"></i> Dificuldade: Intermediária
-                        </span>
-                        <span class="duration">
-                            <i class="fas fa-clock"></i> Duração: 15-30 min
-                        </span>
+                        <span class="difficulty"><i class="fas fa-bolt"></i> Dificuldade: Básica</span>
+                        <span class="duration"><i class="fas fa-clock"></i> Duração: 15-30 min</span>
                     </div>
                 </div>
             </div>
-            <!--jogo 6-->
-            <div class="game-card" data-category="trigonometria" data-name="trigonometria master">
+
+            <!-- Jogo 6 -->
+            <div class="game-card" data-category="geometria" data-name="jogo da memoria">
                 <div class="game-img-container">
-                    <img src="images/Fotos jogos/Jogo da Memória.jpg" alt="Trigonometria Master">
-                    <!-- Ícone de Tutorial Flutuante -->
-                    <div class="video-icon" onclick="openVideoModal(this)">
-                        <i class="fas fa-video"></i>
-                        <span class="tooltip">Tutorial</span>
-                    </div>
+                    <img src="images/Fotos jogos/Jogo da Memória.jpg" alt="Jogo da Memória Geométrico">
                 </div>
                 <div class="game-info">
                     <h3>JOGO DA MEMÓRIA</h3>
-                    <p>Aprenda seno, cosseno e tangente</p>
+                    <p>Memória com formas geométricas</p>
                     <div class="game-details">
                         <span class="status available">Disponível</span>
                         <div class="game-actions">
@@ -346,48 +243,29 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Conteúdo "Sobre o Jogo" (hidden) -->
                 <div class="about-content" style="display:none">
                     <h4>Como Jogar:</h4>
-                    <p>Domine os conceitos de trigonometria resolvendo desafios progressivos:</p>
+                    <p>Encontre pares de cartas geométricas:</p>
                     <ol>
-                        <li>Selecione o tipo de problema</li>
-                        <li>Use as ferramentas de medição</li>
-                        <li>Aplique as fórmulas corretas</li>
-                        <li>Avance para níveis mais complexos</li>
+                        <li>Vire duas cartas por vez</li>
+                        <li>Encontre formas equivalentes</li>
+                        <li>Memorize as posições</li>
                     </ol>
-
-                    <h4>Conceitos Ensinados:</h4>
-                    <ul>
-                        <li>Razões trigonométricas</li>
-                        <li>Teorema de Pitágoras</li>
-                        <li>Relações no círculo unitário</li>
-                    </ul>
-
                     <div class="about-footer">
-                        <span class="difficulty">
-                            <i class="fas fa-bolt"></i> Dificuldade: Intermediária
-                        </span>
-                        <span class="duration">
-                            <i class="fas fa-clock"></i> Duração: 15-30 min
-                        </span>
+                        <span class="difficulty"><i class="fas fa-bolt"></i> Dificuldade: Fácil</span>
+                        <span class="duration"><i class="fas fa-clock"></i> Duração: 10-20 min</span>
                     </div>
                 </div>
             </div>
-            <!--jogo 7-->
-            <div class="game-card" data-category="trigonometria" data-name="trigonometria master">
+
+            <!-- Jogo 7 -->
+            <div class="game-card" data-category="calculos" data-name="ludo">
                 <div class="game-img-container">
-                    <img src="images/Fotos jogos/LUDO.jpg" Trigonometria Master">
-                    <!-- Ícone de Tutorial Flutuante -->
-                    <div class="video-icon" onclick="openVideoModal(this)">
-                        <i class="fas fa-video"></i>
-                        <span class="tooltip">Tutorial</span>
-                    </div>
+                    <img src="images/Fotos jogos/LUDO.jpg" alt="Ludo Matemático">
                 </div>
                 <div class="game-info">
                     <h3>LUDO</h3>
-                    <p>Aprenda seno, cosseno e tangente</p>
+                    <p>Ludo com desafios de cálculo</p>
                     <div class="game-details">
                         <span class="status available">Disponível</span>
                         <div class="game-actions">
@@ -400,48 +278,29 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Conteúdo "Sobre o Jogo" (hidden) -->
                 <div class="about-content" style="display:none">
                     <h4>Como Jogar:</h4>
-                    <p>Domine os conceitos de trigonometria resolvendo desafios progressivos:</p>
+                    <p>Jogue ludo resolvendo problemas para avançar:</p>
                     <ol>
-                        <li>Selecione o tipo de problema</li>
-                        <li>Use as ferramentas de medição</li>
-                        <li>Aplique as fórmulas corretas</li>
-                        <li>Avance para níveis mais complexos</li>
+                        <li>Resolva o cálculo para mover sua peça</li>
+                        <li>Responda corretamente para capturar peças</li>
+                        <li>Chegue primeiro ao centro</li>
                     </ol>
-
-                    <h4>Conceitos Ensinados:</h4>
-                    <ul>
-                        <li>Razões trigonométricas</li>
-                        <li>Teorema de Pitágoras</li>
-                        <li>Relações no círculo unitário</li>
-                    </ul>
-
                     <div class="about-footer">
-                        <span class="difficulty">
-                            <i class="fas fa-bolt"></i> Dificuldade: Intermediária
-                        </span>
-                        <span class="duration">
-                            <i class="fas fa-clock"></i> Duração: 15-30 min
-                        </span>
+                        <span class="difficulty"><i class="fas fa-bolt"></i> Dificuldade: Variável</span>
+                        <span class="duration"><i class="fas fa-clock"></i> Duração: 20-45 min</span>
                     </div>
                 </div>
             </div>
-            <!--jogo 8-->
-            <div class="game-card" data-category="trigonometria" data-name="trigonometria master">
+
+            <!-- Jogo 8 -->
+            <div class="game-card" data-category="algebra" data-name="material dourado">
                 <div class="game-img-container">
-                    <img src="images/Fotos jogos/MATERIAL DOURADO INDIVIDUAL.jpg" alt="Trigonometria Master">
-                    <!-- Ícone de Tutorial Flutuante -->
-                    <div class="video-icon" onclick="openVideoModal(this)">
-                        <i class="fas fa-video"></i>
-                        <span class="tooltip">Tutorial</span>
-                    </div>
+                    <img src="images/Fotos jogos/MATERIAL DOURADO INDIVIDUAL.jpg" alt="Material Dourado">
                 </div>
                 <div class="game-info">
-                    <h3>MATERIAL DOURADO INDIVIDUAL</h3>
-                    <p>Aprenda seno, cosseno e tangente</p>
+                    <h3>MATERIAL DOURADO</h3>
+                    <p>Sistema decimal com material concreto</p>
                     <div class="game-details">
                         <span class="status available">Disponível</span>
                         <div class="game-actions">
@@ -454,48 +313,29 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Conteúdo "Sobre o Jogo" (hidden) -->
                 <div class="about-content" style="display:none">
                     <h4>Como Jogar:</h4>
-                    <p>Domine os conceitos de trigonometria resolvendo desafios progressivos:</p>
+                    <p>Represente números e operações com material dourado:</p>
                     <ol>
-                        <li>Selecione o tipo de problema</li>
-                        <li>Use as ferramentas de medição</li>
-                        <li>Aplique as fórmulas corretas</li>
-                        <li>Avance para níveis mais complexos</li>
+                        <li>Monte números com as peças</li>
+                        <li>Realize operações de soma e subtração</li>
+                        <li>Compreenda o sistema decimal</li>
                     </ol>
-
-                    <h4>Conceitos Ensinados:</h4>
-                    <ul>
-                        <li>Razões trigonométricas</li>
-                        <li>Teorema de Pitágoras</li>
-                        <li>Relações no círculo unitário</li>
-                    </ul>
-
                     <div class="about-footer">
-                        <span class="difficulty">
-                            <i class="fas fa-bolt"></i> Dificuldade: Intermediária
-                        </span>
-                        <span class="duration">
-                            <i class="fas fa-clock"></i> Duração: 15-30 min
-                        </span>
+                        <span class="difficulty"><i class="fas fa-bolt"></i> Dificuldade: Fácil</span>
+                        <span class="duration"><i class="fas fa-clock"></i> Duração: 15-30 min</span>
                     </div>
                 </div>
             </div>
-            <!--jogo 9-->
-            <div class="game-card" data-category="trigonometria" data-name="trigonometria master">
+
+            <!-- Jogo 9 -->
+            <div class="game-card" data-category="geometria" data-name="multiplanos">
                 <div class="game-img-container">
-                    <img src="images/Fotos jogos/MULTIPLANO.jpg" alt="Trigonometria Master">
-                    <!-- Ícone de Tutorial Flutuante -->
-                    <div class="video-icon" onclick="openVideoModal(this)">
-                        <i class="fas fa-video"></i>
-                        <span class="tooltip">Tutorial</span>
-                    </div>
+                    <img src="images/Fotos jogos/MULTIPLANO.jpg" alt="Multiplanos">
                 </div>
                 <div class="game-info">
                     <h3>MULTIPLANO</h3>
-                    <p>Aprenda seno, cosseno e tangente</p>
+                    <p>Geometria plana e espacial</p>
                     <div class="game-details">
                         <span class="status available">Disponível</span>
                         <div class="game-actions">
@@ -508,48 +348,29 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Conteúdo "Sobre o Jogo" (hidden) -->
                 <div class="about-content" style="display:none">
                     <h4>Como Jogar:</h4>
-                    <p>Domine os conceitos de trigonometria resolvendo desafios progressivos:</p>
+                    <p>Construa figuras geométricas no multiplano:</p>
                     <ol>
-                        <li>Selecione o tipo de problema</li>
-                        <li>Use as ferramentas de medição</li>
-                        <li>Aplique as fórmulas corretas</li>
-                        <li>Avance para níveis mais complexos</li>
+                        <li>Use elásticos para formar figuras</li>
+                        <li>Calcule áreas e perímetros</li>
+                        <li>Explore propriedades geométricas</li>
                     </ol>
-
-                    <h4>Conceitos Ensinados:</h4>
-                    <ul>
-                        <li>Razões trigonométricas</li>
-                        <li>Teorema de Pitágoras</li>
-                        <li>Relações no círculo unitário</li>
-                    </ul>
-
                     <div class="about-footer">
-                        <span class="difficulty">
-                            <i class="fas fa-bolt"></i> Dificuldade: Intermediária
-                        </span>
-                        <span class="duration">
-                            <i class="fas fa-clock"></i> Duração: 15-30 min
-                        </span>
+                        <span class="difficulty"><i class="fas fa-bolt"></i> Dificuldade: Intermediária</span>
+                        <span class="duration"><i class="fas fa-clock"></i> Duração: 20-40 min</span>
                     </div>
                 </div>
             </div>
-            <!--jogo 10-->
-            <div class="game-card" data-category="trigonometria" data-name="trigonometria master">
+
+            <!-- Jogo 10 -->
+            <div class="game-card" data-category="calculos" data-name="resta um">
                 <div class="game-img-container">
-                    <img src="images/Fotos jogos/RESTA UM.jpg" alt="Trigonometria Master">
-                    <!-- Ícone de Tutorial Flutuante -->
-                    <div class="video-icon" onclick="openVideoModal(this)">
-                        <i class="fas fa-video"></i>
-                        <span class="tooltip">Tutorial</span>
-                    </div>
+                    <img src="images/Fotos jogos/RESTA UM.jpg" alt="Resta Um Matemático">
                 </div>
                 <div class="game-info">
                     <h3>RESTA UM</h3>
-                    <p>Aprenda seno, cosseno e tangente</p>
+                    <p>Jogo de estratégia com cálculos</p>
                     <div class="game-details">
                         <span class="status available">Disponível</span>
                         <div class="game-actions">
@@ -562,48 +383,29 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Conteúdo "Sobre o Jogo" (hidden) -->
                 <div class="about-content" style="display:none">
                     <h4>Como Jogar:</h4>
-                    <p>Domine os conceitos de trigonometria resolvendo desafios progressivos:</p>
+                    <p>Jogue resta um resolvendo problemas matemáticos:</p>
                     <ol>
-                        <li>Selecione o tipo de problema</li>
-                        <li>Use as ferramentas de medição</li>
-                        <li>Aplique as fórmulas corretas</li>
-                        <li>Avance para níveis mais complexos</li>
+                        <li>Resolva o cálculo para fazer seu movimento</li>
+                        <li>Elimine peças pulando sobre elas</li>
+                        <li>Deixe apenas uma peça no tabuleiro</li>
                     </ol>
-
-                    <h4>Conceitos Ensinados:</h4>
-                    <ul>
-                        <li>Razões trigonométricas</li>
-                        <li>Teorema de Pitágoras</li>
-                        <li>Relações no círculo unitário</li>
-                    </ul>
-
                     <div class="about-footer">
-                        <span class="difficulty">
-                            <i class="fas fa-bolt"></i> Dificuldade: Intermediária
-                        </span>
-                        <span class="duration">
-                            <i class="fas fa-clock"></i> Duração: 15-30 min
-                        </span>
+                        <span class="difficulty"><i class="fas fa-bolt"></i> Dificuldade: Intermediária</span>
+                        <span class="duration"><i class="fas fa-clock"></i> Duração: 15-30 min</span>
                     </div>
                 </div>
             </div>
-            <!--jogo 11-->
-            <div class="game-card" data-category="trigonometria" data-name="trigonometria master">
+
+            <!-- Jogo 11 -->
+            <div class="game-card" data-category="calculos" data-name="régua de fracoes">
                 <div class="game-img-container">
-                    <img src="images/Fotos jogos/Régua de Frações.jpg" alt="Trigonometria Master">
-                    <!-- Ícone de Tutorial Flutuante -->
-                    <div class="video-icon" onclick="openVideoModal(this)">
-                        <i class="fas fa-video"></i>
-                        <span class="tooltip">Tutorial</span>
-                    </div>
+                    <img src="images/Fotos jogos/Régua de Frações.jpg" alt="Régua de Frações">
                 </div>
                 <div class="game-info">
                     <h3>RÉGUA DE FRAÇÕES</h3>
-                    <p>Aprenda seno, cosseno e tangente</p>
+                    <p>Compare e opere frações visualmente</p>
                     <div class="game-details">
                         <span class="status available">Disponível</span>
                         <div class="game-actions">
@@ -616,48 +418,29 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Conteúdo "Sobre o Jogo" (hidden) -->
                 <div class="about-content" style="display:none">
                     <h4>Como Jogar:</h4>
-                    <p>Domine os conceitos de trigonometria resolvendo desafios progressivos:</p>
+                    <p>Use a régua para trabalhar com frações:</p>
                     <ol>
-                        <li>Selecione o tipo de problema</li>
-                        <li>Use as ferramentas de medição</li>
-                        <li>Aplique as fórmulas corretas</li>
-                        <li>Avance para níveis mais complexos</li>
+                        <li>Identifique frações equivalentes</li>
+                        <li>Compare tamanhos de frações</li>
+                        <li>Some e subtraia frações</li>
                     </ol>
-
-                    <h4>Conceitos Ensinados:</h4>
-                    <ul>
-                        <li>Razões trigonométricas</li>
-                        <li>Teorema de Pitágoras</li>
-                        <li>Relações no círculo unitário</li>
-                    </ul>
-
                     <div class="about-footer">
-                        <span class="difficulty">
-                            <i class="fas fa-bolt"></i> Dificuldade: Intermediária
-                        </span>
-                        <span class="duration">
-                            <i class="fas fa-clock"></i> Duração: 15-30 min
-                        </span>
+                        <span class="difficulty"><i class="fas fa-bolt"></i> Dificuldade: Básica</span>
+                        <span class="duration"><i class="fas fa-clock"></i> Duração: 15-30 min</span>
                     </div>
                 </div>
             </div>
-            <!--jogo 12-->
-            <div class="game-card" data-category="trigonometria" data-name="trigonometria master">
+
+            <!-- Jogo 12 -->
+            <div class="game-card" data-category="geometria" data-name="torre de hanoi">
                 <div class="game-img-container">
-                    <img src="images/Fotos jogos/Torre de Hanoi.jpg" alt="Trigonometria Master">
-                    <!-- Ícone de Tutorial Flutuante -->
-                    <div class="video-icon" onclick="openVideoModal(this)">
-                        <i class="fas fa-video"></i>
-                        <span class="tooltip">Tutorial</span>
-                    </div>
+                    <img src="images/Fotos jogos/Torre de Hanoi.jpg" alt="Torre de Hanoi">
                 </div>
                 <div class="game-info">
-                    <h3>TORRES DE HANOI</h3>
-                    <p>Aprenda seno, cosseno e tangente</p>
+                    <h3>TORRE DE HANOI</h3>
+                    <p>Desafio de lógica e sequência</p>
                     <div class="game-details">
                         <span class="status available">Disponível</span>
                         <div class="game-actions">
@@ -670,48 +453,29 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Conteúdo "Sobre o Jogo" (hidden) -->
                 <div class="about-content" style="display:none">
                     <h4>Como Jogar:</h4>
-                    <p>Domine os conceitos de trigonometria resolvendo desafios progressivos:</p>
+                    <p>Resolva o quebra-cabeça da Torre de Hanoi:</p>
                     <ol>
-                        <li>Selecione o tipo de problema</li>
-                        <li>Use as ferramentas de medição</li>
-                        <li>Aplique as fórmulas corretas</li>
-                        <li>Avance para níveis mais complexos</li>
+                        <li>Mova todos os discos para outra haste</li>
+                        <li>Não coloque disco maior sobre menor</li>
+                        <li>Use o menor número de movimentos</li>
                     </ol>
-
-                    <h4>Conceitos Ensinados:</h4>
-                    <ul>
-                        <li>Razões trigonométricas</li>
-                        <li>Teorema de Pitágoras</li>
-                        <li>Relações no círculo unitário</li>
-                    </ul>
-
                     <div class="about-footer">
-                        <span class="difficulty">
-                            <i class="fas fa-bolt"></i> Dificuldade: Intermediária
-                        </span>
-                        <span class="duration">
-                            <i class="fas fa-clock"></i> Duração: 15-30 min
-                        </span>
+                        <span class="difficulty"><i class="fas fa-bolt"></i> Dificuldade: Variável</span>
+                        <span class="duration"><i class="fas fa-clock"></i> Duração: 10-30 min</span>
                     </div>
                 </div>
             </div>
-            <!--jogo 13-->
-            <div class="game-card" data-category="trigonometria" data-name="trigonometria master">
+
+            <!-- Jogo 13 -->
+            <div class="game-card" data-category="geometria" data-name="tangram">
                 <div class="game-img-container">
-                    <img src="images/Fotos jogos/unnamed.jpg" alt="Trigonometria Master">
-                    <!-- Ícone de Tutorial Flutuante -->
-                    <div class="video-icon" onclick="openVideoModal(this)">
-                        <i class="fas fa-video"></i>
-                        <span class="tooltip">Tutorial</span>
-                    </div>
+                    <img src="images/Fotos jogos/unnamed.jpg" alt="Tangram">
                 </div>
                 <div class="game-info">
                     <h3>TANGRAM</h3>
-                    <p>Aprenda seno, cosseno e tangente</p>
+                    <p>Quebra-cabeça geométrico chinês</p>
                     <div class="game-details">
                         <span class="status available">Disponível</span>
                         <div class="game-actions">
@@ -724,48 +488,29 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Conteúdo "Sobre o Jogo" (hidden) -->
                 <div class="about-content" style="display:none">
                     <h4>Como Jogar:</h4>
-                    <p>Domine os conceitos de trigonometria resolvendo desafios progressivos:</p>
+                    <p>Monte figuras usando todas as peças:</p>
                     <ol>
-                        <li>Selecione o tipo de problema</li>
-                        <li>Use as ferramentas de medição</li>
-                        <li>Aplique as fórmulas corretas</li>
-                        <li>Avance para níveis mais complexos</li>
+                        <li>Escolha um desafio</li>
+                        <li>Use todas as 7 peças</li>
+                        <li>Não sobreponha as peças</li>
                     </ol>
-
-                    <h4>Conceitos Ensinados:</h4>
-                    <ul>
-                        <li>Razões trigonométricas</li>
-                        <li>Teorema de Pitágoras</li>
-                        <li>Relações no círculo unitário</li>
-                    </ul>
-
                     <div class="about-footer">
-                        <span class="difficulty">
-                            <i class="fas fa-bolt"></i> Dificuldade: Intermediária
-                        </span>
-                        <span class="duration">
-                            <i class="fas fa-clock"></i> Duração: 15-30 min
-                        </span>
+                        <span class="difficulty"><i class="fas fa-bolt"></i> Dificuldade: Variável</span>
+                        <span class="duration"><i class="fas fa-clock"></i> Duração: 10-30 min</span>
                     </div>
                 </div>
             </div>
-            <!--jogo 14-->
-            <div class="game-card" data-category="trigonometria" data-name="trigonometria master">
+
+            <!-- Jogo 14 -->
+            <div class="game-card" data-category="calculos" data-name="xadrez">
                 <div class="game-img-container">
-                    <img src="images/Fotos jogos/Xadrez.jpg" alt="Trigonometria Master">
-                    <!-- Ícone de Tutorial Flutuante -->
-                    <div class="video-icon" onclick="openVideoModal(this)">
-                        <i class="fas fa-video"></i>
-                        <span class="tooltip">Tutorial</span>
-                    </div>
+                    <img src="images/Fotos jogos/Xadrez.jpg" alt="Xadrez Matemático">
                 </div>
                 <div class="game-info">
                     <h3>XADREZ</h3>
-                    <p>Aprenda seno, cosseno e tangente</p>
+                    <p>Xadrez com problemas matemáticos</p>
                     <div class="game-details">
                         <span class="status available">Disponível</span>
                         <div class="game-actions">
@@ -778,48 +523,29 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Conteúdo "Sobre o Jogo" (hidden) -->
                 <div class="about-content" style="display:none">
                     <h4>Como Jogar:</h4>
-                    <p>Domine os conceitos de trigonometria resolvendo desafios progressivos:</p>
+                    <p>Jogue xadrez resolvendo desafios matemáticos:</p>
                     <ol>
-                        <li>Selecione o tipo de problema</li>
-                        <li>Use as ferramentas de medição</li>
-                        <li>Aplique as fórmulas corretas</li>
-                        <li>Avance para níveis mais complexos</li>
+                        <li>Resolva o problema para fazer seu movimento</li>
+                        <li>Calcule estratégias usando matemática</li>
+                        <li>Dê xeque-mate no rei adversário</li>
                     </ol>
-
-                    <h4>Conceitos Ensinados:</h4>
-                    <ul>
-                        <li>Razões trigonométricas</li>
-                        <li>Teorema de Pitágoras</li>
-                        <li>Relações no círculo unitário</li>
-                    </ul>
-
                     <div class="about-footer">
-                        <span class="difficulty">
-                            <i class="fas fa-bolt"></i> Dificuldade: Intermediária
-                        </span>
-                        <span class="duration">
-                            <i class="fas fa-clock"></i> Duração: 15-30 min
-                        </span>
+                        <span class="difficulty"><i class="fas fa-bolt"></i> Dificuldade: Avançada</span>
+                        <span class="duration"><i class="fas fa-clock"></i> Duração: 30-60 min</span>
                     </div>
                 </div>
             </div>
-            <!--jogo 15-->
-            <div class="game-card" data-category="trigonometria" data-name="trigonometria master">
+
+            <!-- Jogo 15 -->
+            <div class="game-card" data-category="calculos" data-name="abaco">
                 <div class="game-img-container">
-                    <img src="images/Fotos jogos/ÁBACO ESCOLAR.jpg" alt="Trigonometria Master">
-                    <!-- Ícone de Tutorial Flutuante -->
-                    <div class="video-icon"  button onclick="openVideoModal(this)">
-                        <i class="fas fa-video"></i>
-                        <span class="tooltip">Tutorial</span>
-                    </div>
+                    <img src="images/Fotos jogos/ÁBACO ESCOLAR.jpg" alt="Ábaco">
                 </div>
                 <div class="game-info">
-                    <h3>ÁBACO ESCOLAR</h3>
-                    <p>Aprenda seno, cosseno e tangente</p>
+                    <h3>ÁBACO</h3>
+                    <p>Cálculos com ábaco escolar</p>
                     <div class="game-details">
                         <span class="status available">Disponível</span>
                         <div class="game-actions">
@@ -832,32 +558,17 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Conteúdo "Sobre o Jogo" (hidden) -->
                 <div class="about-content" style="display:none">
                     <h4>Como Jogar:</h4>
-                    <p>Domine os conceitos de trigonometria resolvendo desafios progressivos:</p>
+                    <p>Realize operações matemáticas no ábaco:</p>
                     <ol>
-                        <li>Selecione o tipo de problema</li>
-                        <li>Use as ferramentas de medição</li>
-                        <li>Aplique as fórmulas corretas</li>
-                        <li>Avance para níveis mais complexos</li>
+                        <li>Represente números no ábaco</li>
+                        <li>Some e subtraia movendo as contas</li>
+                        <li>Resolva problemas propostos</li>
                     </ol>
-
-                    <h4>Conceitos Ensinados:</h4>
-                    <ul>
-                        <li>Razões trigonométricas</li>
-                        <li>Teorema de Pitágoras</li>
-                        <li>Relações no círculo unitário</li>
-                    </ul>
-
                     <div class="about-footer">
-                        <span class="difficulty">
-                            <i class="fas fa-bolt"></i> Dificuldade: Intermediária
-                        </span>
-                        <span class="duration">
-                            <i class="fas fa-clock"></i> Duração: 15-30 min
-                        </span>
+                        <span class="difficulty"><i class="fas fa-bolt"></i> Dificuldade: Básica</span>
+                        <span class="duration"><i class="fas fa-clock"></i> Duração: 15-30 min</span>
                     </div>
                 </div>
             </div>
@@ -869,11 +580,11 @@
     </footer>
 
     <script src="index.js"></script>
-    <!-- Modal de Reserva (adicione antes do </body>) -->
+    
+    <!-- Modal de Reserva -->
     <div id="reservaModal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
-            
             <h2 id="reservaTitle">Reservar Jogo</h2>
             <form id="reservaForm">
                 <input type="hidden" id="jogoId">
@@ -895,19 +606,7 @@
                 </div>
                 <button type="submit" class="btn-reservar">Confirmar Reserva</button>
             </form>
-         
-        </div>
-    </div>
-    <!-- Modal de Vídeo -->
-    <div id="videoModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeVideoModal()">&times;</span>
-            <h3 id="videoTitle">Vídeo do Jogo</h3>
-            <div class="video-container">
-                <iframe id="videoFrame" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-            </div>
         </div>
     </div>
 </body>
-
 </html>

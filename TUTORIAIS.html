@@ -1,11 +1,364 @@
-<button onclick="window.history.back()" style="
-  background-color: #8b5a2b;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  margin: 20px;">
-  ⬅ Voltar
-</button>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LABMAT | Tutoriais</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        /* Estilos específicos para tutoriais - complementam o index.css */
+        .tutoriais-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .tutorial-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .tutorial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .tutorial-video {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .tutorial-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .tutorial-content {
+            padding: 20px;
+        }
+        
+        .tutorial-content h3 {
+            margin-top: 0;
+            color: #2e5c6e;
+        }
+        
+        .btn-tutorial {
+            display: inline-block;
+            background: #2e5c6e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 15px;
+            transition:  0.3s;
+        }
+        
+        .btn-tutorial:hover {
+            background: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho idêntico ao resto do site -->
+    <header>
+        <h1>LABMAT</h1>
+        <p>Laboratório Interativo de Matemática</p>
+    </header>
+    
+    <!-- Navegação idêntica -->
+    <nav>
+        <div class="nav-container">
+            <a href="./index.html" class="logo"><i class="fas fa-flask"></i> LABMAT</a>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> Início</a>
+                <a href="jogos.html"><i class="fas fa-gamepad"></i> Jogos</a>
+                <a href="tutoriais.html" class="active"><i class="fas fa-graduation-cap"></i> Tutoriais</a>
+                <a href="Sobre.html"><i class="fas fa-info-circle"></i> Sobre</a>
+                <a href="Contato.html"><i class="fas fa-envelope"></i> Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="tutoriais-section">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Tutoriais</h2>
+            <p>Assista aos vídeos explicativos e aprenda a jogar nossos jogos educativos.</p>
+            
+            <div class="tutoriais-grid">
+                <!-- Jogo 1 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-video">
+                        <iframe src="https://www.youtube.com/embed/XFDM1ip5HdU" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>MATIX</h3>
+                        <p>Tutorial completo do jogo de matrizes e álgebra linear.</p>
+                        <a href="https://www.youtube.com/embed/XFDM1ip5HdU" class="btn-tutorial">
+                            <i class="fas fa-play"></i> Assistir Agora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jogo 2 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-video">
+                        <iframe src="https://www.youtube.com/embed/VUTXsPFx-q8" 
+                                frameborder="0" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>ALGEPLAN</h3>
+                        <p>Aprenda a usar o algeplan para resolver equações.</p>
+                        <a href="https://www.youtube.com/embed/VUTXsPFx-q8" class="btn-tutorial">
+                            <i class="fas fa-play"></i> Assistir Agora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jogo 3 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-video">
+                        <iframe src="https://www.youtube.com/embed/Wnqo4Z2K3DQ" 
+                                frameborder="0" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>DAMAS</h3>
+                        <p>Tutorial do jogo de damas com desafios matemáticos.</p>
+                        <a href="https://www.youtube.com/embed/Wnqo4Z2K3DQ" class="btn-tutorial">
+                            <i class="fas fa-play"></i> Assistir Agora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jogo 4 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-video">
+                        <iframe src="https://www.youtube.com/embed/7N9Q7jZgG1k" 
+                                frameborder="0" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>DISCOS DE FRAÇÕES</h3>
+                        <p>Aprenda a trabalhar com frações usando discos.</p>
+                        <a href="https://www.youtube.com/embed/7N9Q7jZgG1k" class="btn-tutorial">
+                            <i class="fas fa-play"></i> Assistir Agora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jogo 5 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-video">
+                        <iframe src="https://www.youtube.com/embed/5FdQ8b4gH6g" 
+                                frameborder="0" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>DOMINÓ</h3>
+                        <p>Tutorial do dominó matemático com operações.</p>
+                        <a href="https://www.youtube.com/embed/5FdQ8b4gH6g" class="btn-tutorial">
+                            <i class="fas fa-play"></i> Assistir Agora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jogo 6 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-video">
+                        <iframe src="https://www.youtube.com/embed/2q4Vr5xXhJQ" 
+                                frameborder="0" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>JOGO DA MEMÓRIA</h3>
+                        <p>Como jogar o jogo da memória com formas geométricas.</p>
+                        <a href="https://www.youtube.com/embed/2q4Vr5xXhJQ" class="btn-tutorial">
+                            <i class="fas fa-play"></i> Assistir Agora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jogo 7 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-video">
+                        <iframe src="https://www.youtube.com/embed/6EN1cXiTdcw" 
+                                frameborder="0" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>LUDO</h3>
+                        <p>Tutorial do ludo com desafios de cálculo.</p>
+                        <a href="https://www.youtube.com/embed/6EN1cXiTdcw" class="btn-tutorial">
+                            <i class="fas fa-play"></i> Assistir Agora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jogo 8 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-video">
+                        <iframe src="https://www.youtube.com/embed/z8L1ZQV4JjA" 
+                                frameborder="0" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>MATERIAL DOURADO</h3>
+                        <p>Aprenda a usar o material dourado para cálculos.</p>
+                        <a href="https://www.youtube.com/embed/z8L1ZQV4JjA" class="btn-tutorial">
+                            <i class="fas fa-play"></i> Assistir Agora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jogo 9 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-video">
+                        <iframe src="https://www.youtube.com/embed/8U9bP1aQCLU" 
+                                frameborder="0" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>MULTIPLANO</h3>
+                        <p>Tutorial de como usar o multiplano para geometria.</p>
+                        <a href="https://www.youtube.com/embed/8U9bP1aQCLU" class="btn-tutorial">
+                            <i class="fas fa-play"></i> Assistir Agora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jogo 10 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-video">
+                        <iframe src="https://www.youtube.com/embed/8lhxIOAfDss" 
+                                frameborder="0" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>RESTA UM</h3>
+                        <p>Como jogar resta um com desafios matemáticos.</p>
+                        <a href="https://www.youtube.com/embed/8lhxIOAfDss" class="btn-tutorial">
+                            <i class="fas fa-play"></i> Assistir Agora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jogo 11 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-video">
+                        <iframe src="https://www.youtube.com/embed/3Z5fZskSSzI" 
+                                frameborder="0" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>RÉGUA DE FRAÇÕES</h3>
+                        <p>Tutorial da régua de frações para comparações.</p>
+                        <a href="https://www.youtube.com/embed/3Z5fZskSSzI" class="btn-tutorial">
+                            <i class="fas fa-play"></i> Assistir Agora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jogo 12 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-video">
+                        <iframe src="https://www.youtube.com/embed/8lhxIOAfDss" 
+                                frameborder="0" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>TORRE DE HANOI</h3>
+                        <p>Aprenda a resolver a torre de Hanoi matemática.</p>
+                        <a href="https://www.youtube.com/embed/8lhxIOAfDss" class="btn-tutorial">
+                            <i class="fas fa-play"></i> Assistir Agora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jogo 13 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-video">
+                        <iframe src="https://www.youtube.com/embed/3J9hdy7gO60" 
+                                frameborder="0" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>TANGRAM</h3>
+                        <p>Tutorial do tangram chinês com formas geométricas.</p>
+                        <a href="https://www.youtube.com/embed/3J9hdy7gO60" class="btn-tutorial">
+                            <i class="fas fa-play"></i> Assistir Agora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jogo 14 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-video">
+                        <iframe src="https://www.youtube.com/embed/OCSbzArwB10" 
+                                frameborder="0" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>XADREZ</h3>
+                        <p>Como jogar xadrez com problemas matemáticos.</p>
+                        <a href="https://www.youtube.com/embed/OCSbzArwB10" class="btn-tutorial">
+                            <i class="fas fa-play"></i> Assistir Agora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jogo 15 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-video">
+                        <iframe src="https://www.youtube.com/embed/wCpWxUeW7BQ" 
+                                frameborder="0" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>ÁBACO</h3>
+                        <p>Tutorial do ábaco escolar para cálculos.</p>
+                        <a href="https://www.youtube.com/embed/wCpWxUeW7BQ" class="btn-tutorial">
+                            <i class="fas fa-play"></i> Assistir Agora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Rodapé idêntico -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>LABMAT</h3>
+                <p>Transformando o aprendizado de matemática através da inovação e tecnologia.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="jogos.html">Jogos</a></li>
+                    <li><a href="tutoriais.html">Tutoriais</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 IFRS - Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>

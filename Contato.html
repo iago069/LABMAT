@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LABMAT | Contato</title>
-    <!-- Usar caminho relativo para CSS -->
     <link rel="stylesheet" href="./index.css">
-    <!-- Incluir Font Awesome via CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Incluir Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -19,11 +16,11 @@
     
     <nav>
         <div class="nav-container">
-            <!-- Usar caminho relativo para a home -->
             <a href="./index.html" class="logo"><i class="fas fa-flask"></i> LABMAT</a>
             <div class="nav-links">
                 <a href="index.html"><i class="fas fa-home"></i> Início</a>
                 <a href="jogos.html"><i class="fas fa-gamepad"></i> Jogos</a>
+                <a href="tutoriais.html" class=""><i class="fas fa-graduation-cap"></i> Tutoriais</a>
                 <a href="Sobre.html"><i class="fas fa-info-circle"></i> Sobre</a>
                 <a href="Contato.html" class="active"><i class="fas fa-envelope"></i> Contato</a>
             </div>
@@ -48,17 +45,27 @@
                 </div>
                 
                 <div class="contact-form">
-                    <h3>Envie sua Mensagem</h3>
-                    <form>
+                    <!-- Mensagem de status (adicionada aqui) -->
+                    <div id="form-message" class="message-status" style="display: none;">
+                        <i class="fas fa-check-circle"></i> <span id="message-text">Mensagem enviada com sucesso!</span>
+                    </div>
+                    
+                    <form id="contactForm" action="https://formsubmit.co/labmatematicaifrs@gmail.com" method="POST">
                         <div class="form-group">
-                            <input type="text" placeholder="Seu Nome" required>
+                            <input type="text" name="nome" placeholder="Seu Nome" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Seu E-mail" required>
+                            <input type="email" name="email" placeholder="Seu E-mail" required>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+                            <textarea name="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
                         </div>
+                        
+                        <!-- Configurações do FormSubmit -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="box">
+                      
+                        
                         <button type="submit" class="submit-btn">
                             <i class="fas fa-paper-plane"></i> Enviar Mensagem
                         </button>
@@ -72,7 +79,50 @@
         <p>&copy; 2025 IFRS - Todos os direitos reservados</p>
     </footer>
 
-    <!-- Usar caminho relativo para JS -->
-    <script src="index.js"></script>
+    <!-- Script de envio AJAX (adicionado aqui) -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const form = this;
+            const button = form.querySelector('button');
+            const originalButtonText = button.innerHTML;
+            
+            // Mostra estado de carregamento
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            button.disabled = true;
+        
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+        
+                if (response.ok) {
+                    showMessage('Mensagem enviada com sucesso!', 'success');
+                    form.reset();
+                } else {
+                    throw new Error('Falha no servidor');
+                }
+            } catch (error) {
+                showMessage('Erro ao enviar. Tente novamente mais tarde.', 'error');
+                console.error('Erro:', error);
+            } finally {
+                button.innerHTML = originalButtonText;
+                button.disabled = false;
+            }
+        });
+        
+        function showMessage(text, type) {
+            const messageDiv = document.getElementById('form-message');
+            messageDiv.className = `message-status ${type}`;
+            document.getElementById('message-text').textContent = text;
+            messageDiv.style.display = 'block';
+            
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 5000);
+        }
+        </script>
 </body>
 </html>
