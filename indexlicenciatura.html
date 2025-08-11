@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licenciatura em Matemática | IFRS - Ibirubá</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+          --primary: #2c3e50;
+          --secondary: #3498db;
+          --accent: #e74c3c;
+          --light: #f8f9fa;
+          --dark: #212529;
+          --gold: #ffd700;
+          --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: 'Poppins', sans-serif;
+          background-color: var(--light);
+          color: var(--dark);
+          line-height: 1.7;
+          overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+          background: linear-gradient(135deg, var(--primary), var(--dark));
+          color: white;
+          padding: 4rem 0;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        header::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+          opacity: 0.15;
+          z-index: 0;
+        }
+
+        header h1 {
+          font-size: 3.5rem;
+          margin-bottom: 0.5rem;
+          position: relative;
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+          font-weight: 700;
+          letter-spacing: 1px;
+        }
+
+        header p {
+          font-size: 1.2rem;
+          opacity: 0.9;
+          position: relative;
+          font-weight: 300;
+        }
+
+        /* Navegação */
+        nav {
+          background-color: rgba(0,0,0,0.8);
+          backdrop-filter: blur(10px);
+          padding: 1rem 0;
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 2rem;
+        }
+
+        .logo {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: white;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+        }
+
+        .logo i {
+          color: var(--gold);
+          margin-right: 10px;
+        }
+
+        .nav-links {
+          display: flex;
+          gap: 1.5rem;
+        }
+
+        .nav-links a {
+          color: white;
+          text-decoration: none;
+          font-weight: 500;
+          padding: 0.5rem 1rem;
+          border-radius: 4px;
+          transition: var(--transition);
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .nav-links a::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 2px;
+          background: var(--gold);
+          transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+          width: 80%;
+        }
+
+        .nav-links a:hover {
+          color: var(--gold);
+        }
+
+        /* Conteúdo Principal */
+        .container {
+          max-width: 1200px;
+          margin: 3rem auto;
+          padding: 0 2rem;
+        }
+
+        .section-title {
+          font-size: 2.5rem;
+          margin-bottom: 2rem;
+          position: relative;
+          display: inline-block;
+          color: var(--primary);
+        }
+
+        .section-title::after {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 60%;
+          height: 4px;
+          background: linear-gradient(90deg, var(--secondary), var(--accent));
+          border-radius: 2px;
+        }
+
+        /* Cards de Informação */
+        .info-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+          gap: 2rem;
+          margin-top: 2rem;
+        }
+
+        .info-card {
+          background: white;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+          transition: var(--transition);
+          position: relative;
+        }
+
+        .info-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .card-header {
+          background: linear-gradient(135deg, var(--primary), var(--dark));
+          color: white;
+          padding: 1rem 1.5rem;
+        }
+
+        .card-header h3 {
+          font-size: 1.5rem;
+          margin-bottom: 0;
+        }
+
+        .card-body {
+          padding: 1.5rem;
+        }
+
+        .info-item {
+          margin-bottom: 0.8rem;
+          display: flex;
+          align-items: flex-start;
+        }
+
+        .info-item i {
+          color: var(--secondary);
+          margin-right: 10px;
+          margin-top: 3px;
+        }
+
+        /* Seção de Contato */
+        .contact-box {
+          background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(46, 204, 113, 0.1)));
+          padding: 2rem;
+          border-radius: 12px;
+          margin-bottom: 2rem;
+          border-left: 4px solid var(--secondary);
+        }
+
+        .contact-box h2 {
+          color: var(--primary);
+          margin-bottom: 1.5rem;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .contact-info {
+          margin-bottom: 1rem;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        /* Lista de Documentos */
+        .documents-section {
+          margin-top: 3rem;
+        }
+
+        .documents-list {
+          list-style: none;
+          column-count: 2;
+          column-gap: 2rem;
+        }
+
+        .documents-list li {
+          margin-bottom: 1rem;
+          break-inside: avoid;
+          padding-left: 1.5rem;
+          position: relative;
+        }
+
+        .documents-list li::before {
+          content: "→";
+          color: var(--secondary);
+          position: absolute;
+          left: 0;
+        }
+
+        .documents-list a {
+          color: var(--primary);
+          transition: var(--transition);
+          display: inline-block;
+        }
+
+        .documents-list a:hover {
+          color: var(--accent);
+          transform: translateX(5px);
+        }
+
+        /* Footer */
+        footer {
+          background: var(--dark);
+          color: white;
+          padding: 3rem 0 1.5rem;
+          margin-top: 4rem;
+        }
+
+        .footer-content {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 2rem;
+        }
+
+        .footer-section h3 {
+          color: white;
+          margin-bottom: 1.5rem;
+          font-size: 1.2rem;
+        }
+
+        .footer-section p, .footer-section a {
+          color: #ddd;
+          margin-bottom: 0.8rem;
+          display: block;
+        }
+
+        .footer-section a:hover {
+          color: var(--gold);
+        }
+
+        .social-icons {
+          display: flex;
+          gap: 1rem;
+          margin-top: 1rem;
+        }
+
+        .social-icons a {
+          font-size: 1.2rem;
+        }
+
+        .footer-bottom {
+          text-align: center;
+          padding: 1.5rem 0 0;
+          margin-top: 2rem;
+          border-top: 1px solid rgba(255,255,255,0.1);
+          color: #aaa;
+          font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+          header h1 {
+              font-size: 2.8rem;
+          }
+          
+          .section-title {
+              font-size: 2.2rem;
+          }
+          
+          .documents-list {
+              column-count: 1;
+          }
+        }
+
+        @media (max-width: 768px) {
+          header h1 {
+              font-size: 2.2rem;
+          }
+          
+          .nav-container {
+              flex-direction: column;
+              gap: 1rem;
+          }
+          
+          .nav-links {
+              width: 100%;
+              justify-content: space-around;
+              flex-wrap: wrap;
+          }
+          
+          .info-grid {
+              grid-template-columns: 1fr;
+          }
+        }
+
+        @media (max-width: 576px) {
+          header {
+              padding: 3rem 0;
+          }
+          
+          header h1 {
+              font-size: 1.8rem;
+          }
+          
+          header p {
+              font-size: 1rem;
+          }
+          
+          .section-title {
+              font-size: 1.8rem;
+          }
+          
+          .nav-links {
+              flex-direction: column;
+              gap: 0.5rem;
+              align-items: center;
+          }
+          
+          .nav-links a {
+              justify-content: center;
+              width: 100%;
+              text-align: center;
+          }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>LICENCIATURA EM MATEMÁTICA</h1>
+            <p>IFRS - Campus Ibirubá</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Matemática</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="indexlicenciatura.html"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="index.html "><i class="fas fa-flask"></i> Laboratório</a></li>
+                <li><a href="#"><i class="fas fa-book"></i> Matriz Curricular</a></li>
+                <li><a href="#"><i class="fas fa-chalkboard-teacher"></i> Docentes</a></li>
+                <li><a href="documentos.html"><i class="fas fa-file-alt"></i> Documentos</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h1 class="section-title">Licenciatura em Matemática</h1>
+        
+        <div class="course-description">
+            <p>O curso de Matemática – Licenciatura visa a formar educadores para atuar nos diferentes níveis da Educação Básica. Possui uma estrutura curricular que permite uma formação sólida em conhecimentos matemáticos e pedagógicos.</p>
+        </div>
+        
+        <div class="contact-box">
+            <h2><i class="fas fa-headset"></i> Contato</h2>
+            <div class="contact-info">
+                <i class="fas fa-user-tie"></i>
+                <div><strong>Coordenadora:</strong> Fabiane Beatriz Sestari</div>
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                <div><strong>Email:</strong> <a href="mailto:fabiane.sestari@ibiruba.ifrs.edu.br">fabiane.sestari@ibiruba.ifrs.edu.br</a></div>
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-phone"></i>
+                <div><strong>Telefone:</strong> (54) 3224-8140</div>
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-at"></i>
+                <div><strong>Email do curso:</strong> <a href="mailto:matematica@ibiruba.ifrs.edu.br">matematica@ibiruba.ifrs.edu.br</a></div>
+            </div>
+        </div>
+        
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="card-header">
+                    <h3>Dados Gerais</h3>
+                </div>
+                <div class="card-body">
+                    <div class="info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div><strong>Modalidade:</strong> Presencial</div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div><strong>Turno:</strong> Noturno</div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-users"></i>
+                        <div><strong>Vagas anuais:</strong> 30</div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-hourglass-half"></i>
+                        <div><strong>Duração:</strong> 4 anos</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-card">
+                <div class="card-header">
+                    <h3>Carga Horária</h3>
+                </div>
+                <div class="card-body">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div><strong>Total:</strong> 3.365 horas</div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-briefcase"></i>
+                        <div><strong>Estágio:</strong> 432 horas</div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-tasks"></i>
+                        <div><strong>Atividades Complementares:</strong> 200 horas</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-card">
+                <div class="card-header">
+                    <h3>Componentes Específicos</h3>
+                </div>
+                <div class="card-body">
+                    <div class="info-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div><strong>TCC:</strong> 66 horas</div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-sign-language"></i>
+                        <div><strong>Libras:</strong> 33 horas</div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-laptop"></i>
+                        <div><strong>EAD:</strong> 306 horas (9,09%)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="documents-section">
+            <h2 class="section-title">Documentos</h2>
+            <ul class="documents-list">
+                <li><a href="https://ibiruba.ifrs.edu.br/site/midias/arquivos/201433143826668ato_autorizativo.pdf">Ato autorizativo</a></li>
+                <li><a href="https://ibiruba.ifrs.edu.br/site/midias/arquivos/20152241343391portaria_de_reconhecimento.pdf">Portaria de Reconhecimento do Curso</a></li>
+                <li><a href="https://docs.google.com/document/d/1ZQoEbwHdzzQ6Riht6LkMdPtfQU5_VuxR/edit?pli=1&authuser=0">Regulamento das Práticas de Ensino e dos Estágios Curriculares</a></li>
+                <li><a href="https://ifrs.edu.br/ibiruba/wp-content/uploads/sites/4/2019/04/REGULAMENTO-PARA-UTILIZA%C3%87%C3%83O-DO-LABORAT%C3%93RIO-DE-ENSINO-DE-MATEM%C3%81TICA.pdf">Regulamento para utilização do Laboratório</a></li>
+                <li><a href="https://ifrs.edu.br/ibiruba/wp-content/uploads/sites/4/2019/04/Regulamento-dos-Est%C3%A1gios.pdf">Regulamento dos Estágios Curriculares</a></li>
+                <li><a href="https://ifrs.edu.br/ibiruba/wp-content/uploads/sites/4/2019/04/REGULAMENTO-DAS-ATIVIDADES-TE%C3%93RICO-PR%C3%81TICAS.pdf">Regulamento das Atividades Teórico-Práticas</a></li>
+                <li><a href="https://ifrs.edu.br/ibiruba/wp-content/uploads/sites/4/2019/04/REGULAMENTO-DO-TRABALHO-DE-CONCLUS%C3%83O-DE-CURSO.pdf">Regulamento do TCC</a></li>
+                <li><a href="https://ifrs.edu.br/ibiruba/wp-content/uploads/sites/4/2018/09/Regulamento-do-Colegiado-do-Curso.pdf">Regulamento do Colegiado do Curso</a></li>
+                <li><a href="https://boletim.sigepe.gov.br/publicacao/detalhar/335750">Portaria 56/2025 – Colegiado</a></li>
+                <li><a href="https://ifrs.edu.br/ibiruba/wp-content/uploads/sites/4/2018/09/Regulamento-N%C3%BAcleo-Docente-Estruturante.pdf">Regulamento Núcleo Docente Estruturante</a></li>
+                <li><a href="https://ifrs.edu.br/ibiruba/wp-content/uploads/sites/4/2025/08/Portaria-NDE-Julho-2025.pdf">Portaria 143/2025 NDE</a></li>
+                <li><a href="https://ifrs.edu.br/ibiruba/wp-content/uploads/sites/4/2025/04/Corpo-Docente-Matematica_2025_1.pdf">Corpo Docente Matemática 2025_1</a></li>
+                <li><a href="https://ifrs.edu.br/ibiruba/wp-content/uploads/sites/4/2020/01/Matriz-Curricular-2020.pdf">Matriz Curricular 2020</a></li>
+                <li><a href="https://ifrs.edu.br/ibiruba/wp-content/uploads/sites/4/2020/01/Projeto-Pedag%C3%B3gico-do-Curso-2020.pdf">Projeto Pedagógico do Curso 2020</a></li>
+                <li><a href="https://ifrs.edu.br/ibiruba/wp-content/uploads/sites/4/2020/10/ppc-2020.pdf">PPC 2020</a></li>
+                <li><a href="https://ifrsibiruba.edupage.org/timetable/">Horários 2025/2</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>IFRS - Campus Ibirubá</h3>
+                <p>RS-142, Km 46, S/n - Distrito Industrial</p>
+                <p>Ibirubá/RS | CEP 98200-000</p>
+                <p>Telefone: (54) 3324-8100</p>
+                <p>E-mail: gabinete@ibiruba.ifrs.edu.br</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Links Úteis</h3>
+                <a href="#">Portal IFRS</a>
+                <a href="https://ifrs.edu.br/ibiruba/moodle-campus-ibiruba/">Moodle</a>
+                <a href="#">Biblioteca</a>
+                <a href="#">Editais</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 Licenciatura em Matemática - IFRS Ibirubá. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
